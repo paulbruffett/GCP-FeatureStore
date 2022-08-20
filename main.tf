@@ -38,3 +38,7 @@ resource "google_storage_bucket" "gcs-temp" {
     location      = "US"
     force_destroy = true
 }
+
+resource "google_compute_network" "vpc_network" {
+  name = "terraform-network"
+}
