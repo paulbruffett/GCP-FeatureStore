@@ -20,14 +20,14 @@ variable "GOOGLECREDENTIALS" {
   type = string
 }
 
-variable "PROJECT_NUMBER" {
+variable "PROJECTNUMBER" {
   type = number
 }
 
 provider "google" {
-  credentials = var.GOOGLE_CREDENTIALS
+  credentials = var.GOOGLECREDENTIALS
 
-  project = var.PROJECT_NUMBER
+  project = var.PROJECTNUMBER
   region  = "us-central1"
   zone    = "us-central1-c"
 }
