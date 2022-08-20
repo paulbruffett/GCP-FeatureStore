@@ -31,3 +31,10 @@ provider "google" {
   region  = "us-central1"
   zone    = "us-central1-c"
 }
+
+
+resource "google_storage_bucket" "gcs-temp" {
+    name          = "pb-temp-gcs"
+    location      = "US"
+    force_destroy = true
+}
