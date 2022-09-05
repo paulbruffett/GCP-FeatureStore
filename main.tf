@@ -47,7 +47,7 @@ resource "google_bigquery_dataset" "sensordata" {
 
     access {
     role = "OWNER"
-    user_by_email = "paulbruffett@gmail.com"
+    user_by_email = "terraform@testvertex-360003.iam.gserviceaccount.com"
   }
 }
 
