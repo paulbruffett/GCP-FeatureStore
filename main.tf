@@ -39,6 +39,18 @@ resource "google_storage_bucket" "gcs-temp" {
     force_destroy = true
 }
 
+
+resource "google_bigquery_dataset" "sensordata" {
+  dataset_id                  = "sensor_data"
+  friendly_name               = "sensorreadings"
+  location                    = "us-east1"
+
+    access {
+    role = "OWNER"
+    user_by_email = "paulbruffett@gmail.com"
+  }
+}
+
 resource "google_bigquery_table" "arduinoreadings_timestamp" {
   dataset_id = google_bigquery_dataset.sensordata.dataset_id
   table_id   = "arduino_prepared"
